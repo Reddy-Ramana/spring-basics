@@ -1,15 +1,16 @@
 package com.ramana.spring.basics;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class SimpleBinarySearch {
 
+	@Autowired
 	private Sorting sorting;
 
 	public SimpleBinarySearch(Sorting sorting) {
 		super();
-		this.sorting = sorting;
-	}
-
-	public void setSorting(Sorting sorting) {
 		this.sorting = sorting;
 	}
 
