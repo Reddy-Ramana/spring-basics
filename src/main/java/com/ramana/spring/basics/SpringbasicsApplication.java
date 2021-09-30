@@ -9,8 +9,9 @@ public class SpringbasicsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbasicsApplication.class, args);
 
-		SimpleBinarySearch binarySearch = new SimpleBinarySearch();
-		int result = binarySearch.binarySearchService(new int [] {12,13,14}, 13);
+		Sorting sorting = new QuickSort();
+		SimpleBinarySearch binarySearch = new SimpleBinarySearch(sorting); 
+		String result = binarySearch.binarySearchService(new int[] {12}, 23);
 		System.out.println(result);
 	}
 
