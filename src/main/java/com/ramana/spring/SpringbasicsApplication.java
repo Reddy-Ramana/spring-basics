@@ -1,16 +1,18 @@
 package com.ramana.spring;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 import com.ramana.spring.basics.SimpleBinarySearch;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan
 public class SpringbasicsApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext applicationContext = SpringApplication.run(SpringbasicsApplication.class, args);
+		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringbasicsApplication.class);
 		SimpleBinarySearch binarySearch = applicationContext.getBean(SimpleBinarySearch.class);
 		SimpleBinarySearch binarySearch1 = applicationContext.getBean(SimpleBinarySearch.class);
 		System.out.println(binarySearch);
