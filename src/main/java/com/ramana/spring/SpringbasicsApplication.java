@@ -1,8 +1,10 @@
-package com.ramana.spring.basics;
+package com.ramana.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+
+import com.ramana.spring.basics.SimpleBinarySearch;
 
 @SpringBootApplication
 public class SpringbasicsApplication {
